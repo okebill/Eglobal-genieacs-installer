@@ -73,11 +73,17 @@ restore_private_dumps_if_requested() {
 }
 
 apply_virtual_parameters() {
-  green "Installing virtual parameter: activedevices"
-  upload_raw_script "virtual_parameters" "activedevices" "${ROOT_DIR}/templates/virtual-parameters/activedevices.js"
+  local vp_dir="${ROOT_DIR}/templates/virtual-parameters"
+  local file
+  local id
 
-  green "Installing virtual parameter: WlanPassword"
-  upload_raw_script "virtual_parameters" "WlanPassword" "${ROOT_DIR}/templates/virtual-parameters/WlanPassword.js"
+  shopt -s nullglob
+  for file in "${vp_dir}"/*.js; do
+    id="$(basename "$file" .js)"
+    green "Installing virtual parameter: ${id}"
+    upload_raw_script "virtual_parameters" "$id" "$file"
+  done
+  shopt -u nullglob
 }
 
 apply_inform_provision() {

@@ -1,10 +1,10 @@
-// Total active LAN hosts = unique MAC count from Hosts.Host table.
-// Use for-of declare() iteration in GenieACS.
+﻿// Total active LAN hosts = jumlah MAC unik di Hosts.Host (sama LAN HOST / DHCP modem)
+// PENTING: di GenieACS pakai "for (var row of declare(...))" BUKAN rows.length
 
 var hourly = Date.now() - 3600000;
 var seen = {};
 var active = 0;
-var key, row, path, paths, i;
+var mac, key, row, path, paths, i;
 
 function addMac(m) {
   if (!m) return;

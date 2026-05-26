@@ -1,0 +1,94 @@
+﻿[
+    {
+        "id":  "IPTR069",
+        "file":  "IPTR069.js"
+    },
+    {
+        "id":  "PonMac",
+        "file":  "PonMac.js"
+    },
+    {
+        "id":  "RXPower",
+        "file":  "RXPower.js"
+    },
+    {
+        "id":  "activedevices",
+        "file":  "activedevices.js"
+    },
+    {
+        "id":  "getSerialNumber",
+        "file":  "getSerialNumber.js"
+    },
+    {
+        "id":  "getdeviceuptime",
+        "file":  "getdeviceuptime.js"
+    },
+    {
+        "id":  "getponmode",
+        "file":  "getponmode.js"
+    },
+    {
+        "id":  "getpppuptime",
+        "file":  "getpppuptime.js"
+    },
+    {
+        "id":  "gettemp",
+        "file":  "gettemp.js"
+    },
+    {
+        "id":  "pppoeIP",
+        "file":  "pppoeIP.js"
+    },
+    {
+        "id":  "pppoeMac",
+        "file":  "pppoeMac.js"
+    },
+    {
+        "id":  "pppoePassword",
+        "file":  "pppoePassword.js"
+    },
+    {
+        "id":  "pppoeUsername",
+        "file":  "pppoeUsername.js"
+    },
+    {
+        "id":  "pppoeUsername2",
+        "file":  "pppoeUsername2.js"
+    },
+    {
+        "id":  "superAdmin",
+        "file":  "superAdmin.js"
+    },
+    {
+        "id":  "superPassword",
+        "file":  "superPassword.js"
+    },
+    {
+        "id":  "userAdmin",
+        "file":  "userAdmin.js"
+    },
+    {
+        "id":  "userPassword",
+        "file":  "userPassword.js"
+    },
+    {
+        "id":  "WiFi_Client_Count",
+        "file":  "WiFi_Client_Count.js"
+    },
+    {
+        "id":  "LAN_Port_Status",
+        "file":  "LAN_Port_Status.js"
+    },
+    {
+        "id":  "SSID_Name",
+        "file":  "SSID_Name.js"
+    },
+    {
+        "id":  "VLAN_ID",
+        "file":  "VLAN_ID.js"
+    },
+    {
+        "id":  "WlanPassword",
+        "file":  "WlanPassword.js"
+    }
+]

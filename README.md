@@ -16,11 +16,42 @@ This repository is designed to be safe for a public GitHub repository:
 - Custom virtual parameters:
   - `activedevices`
   - `WlanPassword`
+  - all exported live ACS virtual parameters from `templates/virtual-parameters/*.js`
 - Custom `inform` provision template.
 - Device list UI config overlay for:
   - active LAN host count
   - WiFi password column
   - safe summon refresh parameters
+
+## Included Virtual Parameters
+
+The current repo includes these virtual parameters exported from the live ACS:
+
+```text
+IPTR069
+PonMac
+RXPower
+activedevices
+getSerialNumber
+getdeviceuptime
+getponmode
+getpppuptime
+gettemp
+pppoeIP
+pppoeMac
+pppoePassword
+pppoeUsername
+pppoeUsername2
+superAdmin
+superPassword
+userAdmin
+userPassword
+WiFi_Client_Count
+LAN_Port_Status
+SSID_Name
+VLAN_ID
+WlanPassword
+```
 
 ## Quick Install On New Server
 
