@@ -1,31 +1,31 @@
 # Eglobal GenieACS Installer
 
-Custom GenieACS installer and parameter overlay for Eglobal/EkoNet ACS.
+Installer GenieACS custom dan parameter overlay untuk ACS Eglobal/EkoNet.
 
-This repository is designed to be safe for a public GitHub repository:
+Repository ini dibuat agar aman dipublikasikan di GitHub:
 
-- It does **not** include customer device data.
-- It does **not** include Telegram bot tokens.
-- It does **not** include ACS passwords in committed files.
-- It can export your current GenieACS config locally, but exported `.bson` files are ignored by Git by default.
+- Tidak berisi data perangkat pelanggan.
+- Tidak berisi token bot Telegram.
+- Tidak berisi password ACS di file yang di-commit.
+- Bisa export config GenieACS lokal, tetapi file `.bson` hasil export otomatis diabaikan oleh Git.
 
-## What This Installs
+## Yang Diinstal
 
-- GenieACS `cwmp`, `nbi`, `fs`, and `ui` services.
-- MongoDB and Node.js dependencies.
-- Custom virtual parameters:
+- Service GenieACS `cwmp`, `nbi`, `fs`, dan `ui`.
+- Dependency MongoDB dan Node.js.
+- Virtual Parameter custom:
   - `activedevices`
   - `WlanPassword`
-  - all exported live ACS virtual parameters from `templates/virtual-parameters/*.js`
-- Custom `inform` provision template.
-- Device list UI config overlay for:
-  - active LAN host count
-  - WiFi password column
-  - safe summon refresh parameters
+  - semua Virtual Parameter hasil export dari ACS live di `templates/virtual-parameters/*.js`
+- Template provision `inform` custom.
+- Overlay config UI device list untuk:
+  - jumlah LAN host aktif
+  - kolom password WiFi
+  - parameter summon yang aman
 
-## Included Virtual Parameters
+## Virtual Parameter Yang Disertakan
 
-The current repo includes these virtual parameters exported from the live ACS:
+Repo ini berisi Virtual Parameter berikut, hasil export dari ACS live:
 
 ```text
 IPTR069
@@ -53,7 +53,7 @@ VLAN_ID
 WlanPassword
 ```
 
-## Quick Install On New Server
+## Install Cepat Di Server Baru
 
 ```bash
 git clone https://github.com/okebill/Eglobal-genieacs-installer.git
@@ -61,16 +61,16 @@ cd Eglobal-genieacs-installer
 sudo bash install.sh
 ```
 
-## Install / Update Parameters Only
+## Install / Update Parameter Saja
 
-Use this when GenieACS is already installed:
+Gunakan ini jika GenieACS sudah terinstall dan Anda hanya ingin memasang/update parameter custom:
 
 ```bash
 cd Eglobal-genieacs-installer
 sudo ACS_PASS='your-acs-password' CONN_REQ_PASS='your-connreq-password' bash install-params.sh
 ```
 
-Optional environment variables:
+Environment variable opsional:
 
 ```bash
 GENIEACS_NBI_URL=http://127.0.0.1:7557
@@ -81,23 +81,23 @@ CONN_REQ_PASS=your-password
 INFORM_INTERVAL=200
 ```
 
-If `ACS_PASS` or `CONN_REQ_PASS` is not provided, the script will ask for it interactively.
+Jika `ACS_PASS` atau `CONN_REQ_PASS` tidak diisi, script akan memintanya secara interaktif.
 
-## Backup Current ACS
+## Backup ACS Saat Ini
 
-Full backup:
+Backup penuh:
 
 ```bash
 sudo bash backup-current.sh
 ```
 
-Export only reusable config collections:
+Export hanya collection config yang bisa dipakai ulang:
 
 ```bash
 sudo bash export-current-config.sh
 ```
 
-The export script writes these local dump files:
+Script export akan membuat file dump lokal berikut:
 
 ```text
 db/config.bson
@@ -107,11 +107,11 @@ db/presets.bson
 db/permissions.bson
 ```
 
-These files are ignored by Git because they may contain sensitive data. Keep them private.
+File tersebut diabaikan oleh Git karena bisa berisi data sensitif. Simpan secara private.
 
-## Important Safety Notes
+## Catatan Keamanan Penting
 
-Do not restore customer data into a new ACS unless you really intend to migrate devices. This project intentionally avoids restoring:
+Jangan restore data pelanggan ke ACS baru kecuali Anda memang ingin migrasi perangkat. Project ini sengaja tidak restore collection berikut:
 
 ```text
 devices
@@ -121,10 +121,10 @@ cache
 locks
 ```
 
-The dangerous command below is intentionally **not** used here:
+Command berbahaya di bawah ini sengaja **tidak** digunakan:
 
 ```bash
 mongorestore --db genieacs --drop db
 ```
 
-That command can overwrite your whole ACS database, including customer devices.
+Command tersebut bisa menimpa seluruh database ACS, termasuk data perangkat pelanggan.
