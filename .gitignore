@@ -1,0 +1,11 @@
+*.log
+*.tmp
+*.bak
+backup/
+backups/
+db/*.bson
+db/*.metadata.json
+db/*.json
+db/*.archive
+db/*/
+!db/README.md
