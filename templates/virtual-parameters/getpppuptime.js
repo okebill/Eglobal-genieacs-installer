@@ -1,4 +1,4 @@
-﻿// Gunakan cache 1-2 menit (60000 - 120000 ms)
+// Gunakan cache 1-2 menit (60000 - 120000 ms)
 const update = Date.now() - 60000;
 let totalSecs = 0;
 

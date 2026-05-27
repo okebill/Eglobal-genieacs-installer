@@ -1,4 +1,4 @@
-﻿// Informasi hardware sangat statis, gunakan cache 24 jam
+// Informasi hardware sangat statis, gunakan cache 24 jam
 const daily = Date.now() - 86400000;
 let pon = "Ethernet";
 

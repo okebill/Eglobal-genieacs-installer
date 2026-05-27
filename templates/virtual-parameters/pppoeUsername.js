@@ -1,4 +1,4 @@
-﻿const hourly = Date.now() - 3600000;
+const hourly = Date.now() - 3600000;
 let user = "";
 
 // Jika admin mengubah username dari GUI (Write)

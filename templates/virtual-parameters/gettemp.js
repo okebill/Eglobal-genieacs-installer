@@ -1,4 +1,4 @@
-﻿// Gunakan cache 5 menit agar tidak membebani sensor hardware modem
+// Gunakan cache 5 menit agar tidak membebani sensor hardware modem
 const cacheTime = Date.now() - 300000;
 let m = "N/A";
 

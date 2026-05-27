@@ -1,4 +1,4 @@
-﻿// pppoeIP Optimized - Anti Fault
+// pppoeIP Optimized - Anti Fault
 const cacheTime = Date.now() - 120000; // Cache 2 menit
 let result = '';
 

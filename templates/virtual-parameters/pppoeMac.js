@@ -1,4 +1,4 @@
-﻿// MAC Address adalah data statis, gunakan cache 24 jam (86.400.000 ms)
+// MAC Address adalah data statis, gunakan cache 24 jam (86.400.000 ms)
 const daily = Date.now() - 86400000;
 let m = "";
 

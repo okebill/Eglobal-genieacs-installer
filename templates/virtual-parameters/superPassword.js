@@ -1,4 +1,4 @@
-﻿// Password superadmin sangat jarang berubah, gunakan cache 24 jam (86.400.000 ms)
+// Password superadmin sangat jarang berubah, gunakan cache 24 jam (86.400.000 ms)
 const daily = Date.now() - 86400000;
 let m = "";
 

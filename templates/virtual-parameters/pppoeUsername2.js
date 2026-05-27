@@ -1,4 +1,4 @@
-﻿// ALIJAYA-NET pppUsername Optimized
+// ALIJAYA-NET pppUsername Optimized
 const hourly = Date.now() - 3600000;
 let result = '';
 

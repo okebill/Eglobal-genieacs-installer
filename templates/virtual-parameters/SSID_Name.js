@@ -1,4 +1,4 @@
-﻿const daily = Date.now() - 86400000;
+const daily = Date.now() - 86400000;
 let ssidName = "-";
 
 // Mengambil SSID pertama (indeks 1)

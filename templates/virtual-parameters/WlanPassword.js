@@ -1,4 +1,4 @@
-﻿var hourly = Date.now() - 3600000;
+var hourly = Date.now() - 3600000;
 var m, r;
 m = "";
 

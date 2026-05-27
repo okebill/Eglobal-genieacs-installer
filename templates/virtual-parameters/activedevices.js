@@ -1,4 +1,4 @@
-﻿// Total active LAN hosts = jumlah MAC unik di Hosts.Host (sama LAN HOST / DHCP modem)
+// Total active LAN hosts = jumlah MAC unik di Hosts.Host (sama LAN HOST / DHCP modem)
 // PENTING: di GenieACS pakai "for (var row of declare(...))" BUKAN rows.length
 
 var hourly = Date.now() - 3600000;

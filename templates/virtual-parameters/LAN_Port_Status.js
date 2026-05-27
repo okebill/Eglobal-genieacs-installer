@@ -1,4 +1,4 @@
-﻿const hourly = Date.now() - 3600000;
+const hourly = Date.now() - 3600000;
 let status = [];
 
 // Cek status LAN 1 sampai 4

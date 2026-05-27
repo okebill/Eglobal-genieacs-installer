@@ -1,4 +1,4 @@
-﻿// Gunakan cache 1 menit (60000 ms) agar tidak terlalu sering nembak modem
+// Gunakan cache 1 menit (60000 ms) agar tidak terlalu sering nembak modem
 const update = Date.now() - 60000;
 let totalSecs = 0;
 

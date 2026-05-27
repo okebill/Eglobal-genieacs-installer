@@ -1,4 +1,4 @@
-﻿// IPTR069 Optimized - Anti Fault
+// IPTR069 Optimized - Anti Fault
 const cacheTime = Date.now() - 300000; // Cache 5 menit
 let result = '';
 

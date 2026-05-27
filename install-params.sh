@@ -31,6 +31,18 @@ prompt_secret() {
   export "$var_name=$current_value"
 }
 
+validate_secret() {
+  local var_name="$1"
+  local current_value="${!var_name:-}"
+
+  case "$current_value" in
+    ""|"your-acs-password"|"your-connreq-password"|"your-password"|"CHANGE_ME")
+      red "${var_name} masih kosong atau masih placeholder. Isi dengan password sebenarnya."
+      exit 1
+      ;;
+  esac
+}
+
 sed_escape() {
   printf '%s' "$1" | sed -e 's/[\/&]/\\&/g'
 }
@@ -103,6 +115,26 @@ apply_inform_provision() {
   rm -f "$tmp_file"
 }
 
+apply_provisions() {
+  local provision_dir="${ROOT_DIR}/templates/provisions"
+  local file
+  local id
+
+  shopt -s nullglob
+  for file in "${provision_dir}"/*.js; do
+    id="$(basename "$file" .js)"
+    if [ "$id" = "inform" ]; then
+      continue
+    fi
+
+    green "Installing provision: ${id}"
+    upload_raw_script "provisions" "$id" "$file"
+  done
+  shopt -u nullglob
+
+  apply_inform_provision
+}
+
 apply_ui_config_overlay() {
   green "Applying UI config overlay"
 
@@ -140,10 +172,12 @@ main() {
 
   prompt_secret ACS_PASS "ACS management server password"
   prompt_secret CONN_REQ_PASS "Connection request password"
+  validate_secret ACS_PASS
+  validate_secret CONN_REQ_PASS
 
   restore_private_dumps_if_requested
   apply_virtual_parameters
-  apply_inform_provision
+  apply_provisions
   apply_ui_config_overlay
   restart_services
 

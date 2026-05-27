@@ -1,4 +1,4 @@
-﻿// Gunakan cache 5-10 menit (300000 - 600000 ms) agar tidak menyiksa modem
+// Gunakan cache 5-10 menit (300000 - 600000 ms) agar tidak menyiksa modem
 const cacheTime = Date.now() - 300000;
 let m = "N/A";
 

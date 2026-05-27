@@ -1,4 +1,4 @@
-﻿// Gunakan cache 1 jam (3600000 ms) agar tidak membebani koneksi CWMP
+// Gunakan cache 1 jam (3600000 ms) agar tidak membebani koneksi CWMP
 const hourly = Date.now() - 3600000;
 let pw = "";
 

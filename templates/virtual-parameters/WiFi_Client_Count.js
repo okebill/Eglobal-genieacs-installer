@@ -1,4 +1,4 @@
-﻿const hourly = Date.now() - 3600000;
+const hourly = Date.now() - 3600000;
 let clients = 0;
 
 // Mengambil jumlah host yang aktif di tabel jaringan lokal

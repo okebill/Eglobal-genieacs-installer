@@ -1,4 +1,4 @@
-﻿
+
 let serialNumber = "";
 let sn = "";
 let hexPart = "";
