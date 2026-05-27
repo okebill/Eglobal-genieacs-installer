@@ -18,11 +18,14 @@ Repository ini dibuat agar aman dipublikasikan di GitHub:
   - `WlanPassword`
   - semua Virtual Parameter hasil export dari ACS live di `templates/virtual-parameters/*.js`
 - Template provision `inform` custom.
+<<<<<<< HEAD
 - Provision tambahan:
   - `bootstrap`
   - `default`
   - `refresh-activedevices`
   - `useradmin` versi aman tanpa password asli
+=======
+>>>>>>> origin/main
 - Overlay config UI device list untuk:
   - jumlah LAN host aktif
   - kolom password WiFi
